@@ -55,7 +55,7 @@
     var rgba,
         actual,
         container = e.currentTarget.parentElement,
-        num = +e.currentTarget.name;
+        num = +container.id;
 
     rgba = getValues(num);
     actual = actualColor(num);
@@ -65,13 +65,14 @@
 
     adjustContrast(actual, container, num);
     while (num < 3) {
-      console.log(num)
       num ++;
       $('#' + num + ' > .update').trigger('click');
     }
   }
 
+  $('input[type="number"]')
+    .on('blur', updateValues)
+    .on('keyup', updateValues);
   $('.update').click(updateValues);
-  $('.update-all').click(updateAllValues);
-  $('.update-all').trigger('click');
+  $($('.update')[0]).trigger('click');
 })();
