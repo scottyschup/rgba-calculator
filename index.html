@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Color tester</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css" media="screen">
+  </head>
+  <body>
+    <p>
+      Background RGBA = 255, 255, 255, 1.0
+    </p>
+    <div class="outer color-box" id="1">
+      <label for="r1">Red: </label>
+      <input type="number" min="0" max="255" step="1" name="r1" id="r1" value="0">
+      <label for="g1">Green: </label>
+      <input type="number" min="0" max="255" step="1" name="g1" id="g1" value="0">
+      <label for="b1">Blue: </label>
+      <input type="number" min="0" max="255" step="1" name="b1" id="b1" value="0">
+      <label for="a1">Alpha: </label>
+      <input type="number" min="0" max="1" step="0.1" name="a1" id="a1" value="1.0">
+      <button class="update" name="1">Update</button>
+      <div class="actual-info">
+        <h3>Actual RGBA:</h3>
+        <div class="color-sample" id="actual1"></div>
+        <span id="actual1-text"></span>
+      </div>
+      <div class="middle color-box" id="2">
+        <label for="r2">Red: </label>
+        <input type="number" min="0" max="255" step="1" name="r2" id="r2" value="255">
+        <label for="g2">Green: </label>
+        <input type="number" min="0" max="255" step="1" name="g2" id="g2" value="255">
+        <label for="b2">Blue: </label>
+        <input type="number" min="0" max="255" step="1" name="b2" id="b2" value="255">
+        <label for="a2">Alpha: </label>
+        <input type="number" min="0" max="1" step="0.1" name="a2" id="a2" value="0.5">
+        <button class="update" name="2">Update</button>
+        <div class="actual-info">
+          <h3>Actual RGBA:</h3>
+          <div class="color-sample" id="actual2"></div>
+          <span id="actual2-text"></span>
+        </div>
+        <div class="inner color-box" id="3">
+          <label for="r3">Red: </label>
+          <input type="number" min="0" max="255" step="1" name="r3" id="r3" value="255">
+          <label for="g3">Green: </label>
+          <input type="number" min="0" max="255" step="1" name="g3" id="g3" value="255">
+          <label for="b3">Blue: </label>
+          <input type="number" min="0" max="255" step="1" name="b3" id="b3" value="255">
+          <label for="a3">Alpha: </label>
+          <input type="number" min="0" max="1" step="0.1" name="a3" id="a3" value="0.5">
+          <button class="update" name="3">Update</button>
+          <div class="actual-info">
+            <h3>Actual RGBA:</h3>
+            <div class="color-sample" id="actual3"></div>
+            <span id="actual3-text"></span>
+          </div>
+          <button class="update-all" name="button">Update All</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
